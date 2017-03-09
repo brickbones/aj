@@ -87,6 +87,8 @@ header {
         letter-spacing: 2px;
         position: relative;
         transition: .3s; }
+        header nav ul a:hover {
+          color: #a3a3a3; }
         header nav ul a:after {
           transition: .3s;
           content: '';
