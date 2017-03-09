@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Cormorant+Garamond|Great+Vibes");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -45,7 +46,94 @@ table {
   box-sizing: border-box; }
 
 body {
-  background: #fff; }
+  background: #fff;
+  padding: 0 15px; }
+
+a, p, h1, h2, h3, h4, h5 {
+  font-family: 'Cormorant Garamond', serif;
+  text-decoration: none; }
 
 .container {
-  max-width: 1070px; }
+  width: 100%;
+  max-width: 1070px;
+  margin: 0 auto; }
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  margin-top: 65px; }
+  header nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-around;
+    width: 100%; }
+    header nav div {
+      width: 100%; }
+    header nav ul {
+      width: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      justify-content: space-around; }
+      header nav ul a {
+        color: #bcbcbc;
+        font-size: 16px;
+        letter-spacing: 2px; }
+
+.nav-right, .nav-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  flex: 2; }
+
+.logo img {
+  margin: 0 auto;
+  display: block; }
+
+.logo {
+  flex: 1; }
+
+.slider {
+  width: 100%;
+  background-image: linear-gradient(white, white), linear-gradient(180deg, #e8e8e8, #fff 20%, #fff 80%, #e8e8e8 100%);
+  background-repeat: no-repeat;
+  background-origin: padding-box, border-box;
+  border: 1px solid transparent;
+  margin-top: 40px;
+  padding: 24px;
+  z-index: 1;
+  position: relative; }
+  .slider img {
+    width: 100%; }
+
+.welcome {
+  max-width: 470px;
+  background: #ccc;
+  padding: 30px;
+  margin: -98px auto 0 auto;
+  text-align: center;
+  background: linear-gradient(180deg, #fff, #f3f3f3);
+  border: solid 1px #E7E7E7;
+  z-index: 2;
+  position: relative; }
+  .welcome h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 64px;
+    color: #bbced0; }
+  .welcome p {
+    color: #9D9D9D;
+    line-height: 1.5;
+    font-size: 16px;
+    margin: 18px 0 0 0; }
+    .welcome p:after {
+      content: url(../../img/decoration.png);
+      position: relative;
+      top: 18px; }

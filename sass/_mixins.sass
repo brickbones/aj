@@ -1,0 +1,22 @@
+@mixin flex
+  display: -webkit-box
+  display: -ms-flexbox
+  display: -webkit-flex
+  display: flex
+
+@mixin roundy($radius: 6px)
+  -webkit-border-radius: $radius
+  -moz-border-radius: $radius
+  border-radius: $radius
+
+@mixin font-garamond
+  font-family: 'Cormorant Garamond', serif
+
+@mixin font-vibes
+  font-family: 'Great Vibes', cursive
+
+@mixin gradient-border
+  background-image: linear-gradient(white, white), linear-gradient(180deg, #e8e8e8, #fff 20%, #fff 80%, #e8e8e8 100%)
+  background-repeat: no-repeat
+  background-origin: padding-box, border-box
+  border: 1px solid transparent
