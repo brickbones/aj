@@ -84,7 +84,27 @@ header {
       header nav ul a {
         color: #bcbcbc;
         font-size: 16px;
-        letter-spacing: 2px; }
+        letter-spacing: 2px;
+        position: relative;
+        transition: .3s; }
+        header nav ul a:after {
+          transition: .3s;
+          content: '';
+          bottom: 0; }
+        header nav ul a:hover:after {
+          content: '';
+          height: 2px;
+          width: 100%;
+          background: #E8E8E8;
+          display: block;
+          position: absolute;
+          animation: nav-hover .4s ease-in-out forwards; }
+
+@keyframes nav-hover {
+  0% {
+    bottom: 0px; }
+  100% {
+    bottom: -10px; } }
 
 .nav-right, .nav-left {
   display: -webkit-box;
@@ -124,6 +144,17 @@ header {
   border: solid 1px #E7E7E7;
   z-index: 2;
   position: relative; }
+  .welcome:after {
+    content: '';
+    background: url(../../img/shadow.png) no-repeat;
+    background-position: center top;
+    display: block;
+    position: absolute;
+    bottom: -27px;
+    left: 0;
+    right: 0;
+    height: 27px;
+    width: 100%; }
   .welcome h1 {
     font-family: 'Great Vibes', cursive;
     font-size: 64px;
@@ -136,4 +167,49 @@ header {
     .welcome p:after {
       content: url(../../img/decoration.png);
       position: relative;
-      top: 18px; }
+      top: 18px;
+      display: block; }
+
+.services {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between; }
+  .services a {
+    width: 100%;
+    margin: 90px 30px 30px 0;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ededed; }
+    .services a .service {
+      text-align: center;
+      height: 180px;
+      background-size: cover;
+      width: 100%; }
+      .services a .service h1 {
+        font-size: 48px;
+        color: #9D9D9D;
+        position: relative;
+        top: -25px;
+        transition: .3s; }
+        .services a .service h1 span {
+          font-family: 'Great Vibes', cursive; }
+      .services a .service:hover h1 {
+        top: -40px;
+        color: #b4c7ca; }
+      .services a .service.about {
+        background: url(../../img/aboutus.jpg) center; }
+      .services a .service.galleries {
+        background: url(../../img/wedding2.jpg) center; }
+      .services a .service.blog {
+        background: url(../../img/blog.jpg) center; }
+  .services > :last-child {
+    margin-right: 0px; }
+
+.facebook {
+  background: url(../../img/facebook-bg.jpg) center;
+  background-size: cover;
+  width: 100%;
+  height: 347px;
+  opacity: 0.3;
+  margin: 60px 0; }

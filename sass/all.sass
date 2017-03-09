@@ -34,6 +34,26 @@ header
         color: #bcbcbc
         font-size: 16px
         letter-spacing: 2px
+        position: relative
+        transition: .3s
+        &:after
+          transition: .3s
+          content: ''
+          bottom: 0
+        &:hover:after
+          content: ''
+          height: 2px
+          width: 100%
+          background: #E8E8E8
+          display: block
+          position: absolute
+          animation: nav-hover .4s ease-in-out forwards
+
+@keyframes nav-hover
+  0%
+    bottom: 0px
+  100%
+    bottom: -10px
 
 .nav-right, .nav-left
   @include flex
@@ -67,6 +87,17 @@ header
   border: solid 1px #E7E7E7
   z-index: 2
   position: relative
+  &:after
+    content: ''
+    background: url(../../img/shadow.png) no-repeat
+    background-position: center top
+    display: block
+    position: absolute
+    bottom: -27px
+    left: 0
+    right: 0
+    height: 27px
+    width: 100%
   h1
     @include font-vibes
     font-size: 64px
@@ -80,3 +111,46 @@ header
       content: url(../../img/decoration.png)
       position: relative
       top: 18px
+      display: block
+
+.services
+  @include flex
+  justify-content: space-between
+  a
+    width: 100%
+    margin: 90px 30px 30px 0
+    padding-bottom: 20px
+    border-bottom: 1px solid #ededed
+    .service
+      h1
+        font-size: 48px
+        color: #9D9D9D
+        position: relative
+        top: -25px
+        transition: .3s
+        span
+          @include font-vibes
+      text-align: center
+      height: 180px
+      background-size: cover
+      width: 100%
+      &:hover
+        h1
+          top: -40px
+          color: #b4c7ca
+      &.about
+        background: url(../../img/aboutus.jpg) center
+      &.galleries
+        background: url(../../img/wedding2.jpg) center
+      &.blog
+        background: url(../../img/blog.jpg) center
+  & > :last-child
+    margin-right: 0px
+
+.facebook
+  background: url(../../img/facebook-bg.jpg) center
+  background-size: cover
+  width: 100%
+  height: 347px
+  opacity: 0.3
+  margin: 60px 0
