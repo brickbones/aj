@@ -257,3 +257,20 @@ header {
     background-size: 124px 28px;
     display: block;
     margin: 10px auto 0 auto; }
+
+.gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px; }
+  .gallery div {
+    height: 270px;
+    width: 25%;
+    padding: 0 15px;
+    margin: 15px 0; }
+    .gallery div div {
+      width: 100%;
+      background: #ccc;
+      display: block; }
